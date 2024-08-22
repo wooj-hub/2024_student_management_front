@@ -1,0 +1,31 @@
+
+
+      {student.map((student) => {
+        <tr className="py-3 border-b border-black grid grid-cols-4 justify-items-center items-center">
+          <td>{student.student_id}</td>
+          <td>{student.student_name}</td>
+          <td>
+            <button
+              className="mx-1 p-3 border"
+              onClick={() => handleAtt("출석")}
+            >
+              출석
+            </button>
+            <button
+              className="mx-1 p-3 border"
+              onClick={() => handleAtt("지각")}
+            >
+              지각
+            </button>
+            <button
+              className="mx-1 p-3 border"
+              onClick={() => handleAtt("결석")}
+            >
+              결석
+            </button>
+          </td>
+          <td className="hover:cursor-pointer" onClick={handleMemo}>
+            <AddCircleOutlineOutlinedIcon />
+          </td>
+        </tr>;
+      })}
